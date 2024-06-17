@@ -13,4 +13,4 @@ openai_max_tokens = os.environ['OPENAI_MAX_TOKENS']
 
 allow_origins = os.environ['ALLOW_ORIGINS'].split(',')
 
-debug=True
+debug=False
