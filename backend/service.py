@@ -17,6 +17,7 @@ async def generate(data : GenerateRequest) -> str :
         response : httpx.Response = await client.send(request, stream=True)
         response.raise_for_status()
     except:
+        print('proxy connection error')
         raise ServiceException('Completions Error')
     
     content = ''
@@ -28,9 +29,10 @@ async def generate(data : GenerateRequest) -> str :
         await response.aclose()
         await client.aclose()
     
-    if config.debug : 
-        dump(content)
+    if config.debug : dump(content)
     
-    if check_proxy_error(content) : raise ServiceException('Completions Error')
+    if check_proxy_error(content) : 
+        print('proxy response error')
+        raise ServiceException('Completions Error')
     
     return content
