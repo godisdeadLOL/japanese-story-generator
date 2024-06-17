@@ -17,7 +17,5 @@ async def index() :
 @router.post('/generate')
 @limiter.limit(config.rate_limit)
 async def generate(request : Request, data : GenerateRequest) :
-    print(request.headers)
-    
     content = await service.generate(data)
     return PlainTextResponse(content) # StreamingResponse(generator, media_type="text/event-stream")
