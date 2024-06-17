@@ -7,6 +7,8 @@ export default defineConfig({
     preact()
   ],
 
+  base: "/japanese-story-generator/",
+
   resolve: {
     alias: [
       { find: '@', replacement: "/src" },
