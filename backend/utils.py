@@ -13,12 +13,13 @@ def prepare_openai_messages(data : GenerateRequest) :
     ### Instructions
     My japanese level is about {data.level}.
     Come up with a story in japanese. Make it corresponding to my level.
-    Write {data.sentences} sentences and follow additional notes.
     Write every sentence on a new line.
     Don't write any transcriptions.
+    Follow additional notes.
+    Write excactly {data.sentences} sentence(s).
     """
     
-    prefill_block = "Alright. Here's your story:"
+    prefill_block = "Alright. I will write {data.sentences} sentence(s). Here's your story:"
     
     return [
         {'role' : 'system', 'content' : notes_block},
