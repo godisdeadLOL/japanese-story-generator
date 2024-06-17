@@ -32,7 +32,7 @@ async def generate(data : GenerateRequest) -> str :
     if config.debug : dump(content)
     
     if check_proxy_error(content) : 
-        print('proxy response error')
+        print('proxy response error:\n', content)
         raise ServiceException('Completions Error')
     
     return content
