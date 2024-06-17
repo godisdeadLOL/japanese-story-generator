@@ -1,0 +1,32 @@
+{
+  "name": "japanese-story-generator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource-variable/noto-sans-jp": "^5.0.19",
+    "@fontsource/inter": "^5.0.18",
+    "@fontsource/open-sans": "^5.0.28",
+    "axios": "^1.7.2",
+    "framer-motion": "^11.2.10",
+    "preact": "^10.19.6"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.8.2",
+    "eslint": "^8.57.0",
+    "eslint-config-react-app": "^7.0.1",
+    "vite": "^5.2.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}
